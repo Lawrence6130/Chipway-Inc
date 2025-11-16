@@ -11,10 +11,16 @@ document.addEventListener('DOMContentLoaded',function(){
   var form = document.getElementById('contact-form');
   if(form){
     form.addEventListener('submit',function(e){
-      e.preventDefault();
       var result = document.getElementById('contact-result');
-      result.textContent = 'Thanks — your message was received (demo).';
-      form.reset();
+      var usingPlaceholder = (form.dataset.demo === 'true') || (form.action && form.action.includes('REPLACE_WITH_YOUR_FORM_ID'));
+      if(usingPlaceholder){
+        e.preventDefault();
+        result.textContent = 'Thanks — your message was received (demo).';
+        form.reset();
+        return;
+      }
+      // otherwise allow the form to submit to the configured endpoint
+      if(result) result.textContent = 'Sending…';
     });
   }
 });
