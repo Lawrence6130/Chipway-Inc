@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Chipway Inc</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Chipway Inc</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Contact Us</h1>
+    <p>For inquiries, email <a href="mailto:info@chipway.com">info@chipway.com</a> or use the form below.</p>
+    <!-- To enable real form handling, replace the action below with your Formspree form ID
+         Example: https://formspree.io/f/mnqwkrey  -->
+    <form id="contact-form" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST" data-demo="true">
+      <label>Name<br><input name="name" required></label>
+      <label>Email<br><input name="email" type="email" required></label>
+      <label>Message<br><textarea name="message" rows="6" required></textarea></label>
+      <button type="submit" class="btn">Send</button>
+    </form>
+    <div id="contact-result" aria-live="polite"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Chipway Inc</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
